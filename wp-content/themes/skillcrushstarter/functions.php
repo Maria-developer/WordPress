@@ -86,3 +86,7 @@ function custom_excerpt_more($more) {
 	return '...<div class="read-more"><a href="'. get_permalink() . '"><span>Read more</span> »</a></div>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
+
+// Remove cookies checkbox from comments section
+
+remove_action( 'set_comment_cookies', 'wp_set_comment_cookies' );
